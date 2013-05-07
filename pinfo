@@ -5,7 +5,7 @@ export PROMPT_COMMAND=pinfo::ps1
 function pinfo () {
     case $1 in
         '-ps1') pinfo::ps1 ;;
-				configure*) shift; pinfo::configure "$@" ;;
+				configure) shift; pinfo::configure "$@" ;;
         *) pinfo::explain ;;
     esac
 }
